@@ -53,7 +53,31 @@ public class ShowRecordFragment extends Fragment {
                 
                 String number = numberEditText.getText().toString();
 
-            //    mDbHelper.getContact();
+//               mDbHelper.getContact(number);
+//                nameTextView.setText( mDbHelper.getContact(number).getName());
+//               if( mDbHelper.getContact(number).getName().equals(null))
+//               {
+//                   nameTextView.setText(" No data found");
+//               }
+
+                if (!(mDbHelper.getContact(number).getName().equals(null ))) {
+                    nameTextView.setText(mDbHelper.getContact(number).getName());
+                }else
+                {
+                    nameTextView.setText(" No data found");
+                }
+
+
+
+
+
+//                if (mDbHelper.getContact(number)!=null){
+//                    nameTextView.setText( mDbHelper.getContact(number).getName());
+//                }
+//                else
+//                {
+//                    nameTextView.setText("Sorry no record found for this n");
+//                }
 
             }
         });

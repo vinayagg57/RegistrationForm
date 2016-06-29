@@ -43,8 +43,14 @@ public class RegistrationFragment extends Fragment {
         Save.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        String name = mobileEditText.getText().toString();
-        String number = nameEditText.getText().toString();
+//        String initial = mobileEditText.getText().toString().substring(0,1);
+//        if(initial.equals(0))
+//        {
+//            mobileEditText.setError("No need to enter 0");
+//        }
+        long number = Long.parseLong(mobileEditText.getText().toString());
+        String name = nameEditText.getText().toString();
+
         db.addContact(new Contact(name, number));
 Toast.makeText(getActivity(),"Data Addaed",Toast.LENGTH_LONG).show();
 

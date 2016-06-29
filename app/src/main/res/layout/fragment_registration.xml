@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/phone_number_et"
             android:maxLength="10"
+            android:inputType="number"
             android:hint="Enter name here" />
     </LinearLayout>
     <Button
