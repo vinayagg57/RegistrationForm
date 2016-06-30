@@ -68,7 +68,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 new String[]{String.valueOf(id)}, null, null, null, null);
         Contact contact;
 
-        if (cursor != null) {
+        if (cursor != null && cursor.getCount()>0 ) {
             cursor.moveToFirst();
             contact = new Contact((cursor.getString(1)));
         } else {
